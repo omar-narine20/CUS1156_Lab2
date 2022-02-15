@@ -14,9 +14,15 @@ public class UniqueWords
       for (int i = 0; i < list.size(); i++)
       {		 for (int j = 0; j < list.size(); j++)
 		 {
-			
+			if( list.get(i).equals(list.get(j)) && i!=j ) 
+			{
+				count ++; //count counts the occurrence of repeating words
+			}
 		 }
       }
+      
+      count = list.size() - count; //Subtracts the repeat word count from total word count to get original word count
+      
 	  return count;
    }
 
